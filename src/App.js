@@ -1,23 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Description from './Components/Description';
+import Image from './Components/Image';
+import Name from './Components/Name';
+import Price from './Components/Price';
+import Product from './Product';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 function App() {
+  // var a = "Souad"
+  // var user = {
+  //   name : 'Dali', 
+  //   city : 'Bhar Lazreg',
+  //   age : 12
+  // }
+
+  var name = ""
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <h1>{Product.name}</h1>
+      <h2>{Product.price}</h2>
+      <h3>{Product.description}</h3>
+      <img src={Product.URL} alt='Not Found'/> */}
+        {/* <h1>GOMYCODE</h1>
+        <h2>{a}</h2>
+        <h3>{user.name}</h3>
+        <h4>{user.city}</h4>
+        <h5>{user.age}</h5> */}
+
+       
+        
+        
+
+        <Card style={{ width: '18rem' }}>
+        {name !== "" && <Image/>}
+      <Card.Body>
+        <Card.Title> <Name/></Card.Title>
+        <Card.Text>
+        <Price/>
+        <Description/>
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+
+
+    <h1>{name == "" ? "Saaalemo Alaykom" : `Bonjour ${name}`}</h1>
     </div>
   );
 }
